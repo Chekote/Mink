@@ -172,6 +172,14 @@ abstract class CoreDriver implements DriverInterface
     /**
      * {@inheritdoc}
      */
+    public function getCssValue($xpath, $name)
+    {
+      throw new UnsupportedDriverActionException('Getting the CSS value is not supported by %s', $this);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function setValue($xpath, $value)
     {
         throw new UnsupportedDriverActionException('Setting the field value is not supported by %s', $this);

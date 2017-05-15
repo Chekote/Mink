@@ -106,6 +106,17 @@ class NodeElement extends TraversableElement
     }
 
     /**
+     * Returns the specified computed CSS value.
+     *
+     * @param string $name
+     *
+     * @return string
+     */
+    public function getCssValue($name) {
+      return $this->getDriver()->getCssValue($this->getXpath(), $name);
+    }
+
+    /**
      * Checks whether element has attribute with specified name.
      *
      * @param string $name

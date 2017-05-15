@@ -353,6 +353,21 @@ interface DriverInterface
     public function getValue($xpath);
 
     /**
+     * Returns element's computed CSS value by it's XPath query.
+     *
+     * @param string $xpath The xpath of the Element to get the value from.
+     * @param string $name  The name of the computed CSS value to get.
+     *
+     * @return string
+     *
+     * @throws UnsupportedDriverActionException When operation not supported by the driver
+     * @throws DriverException                  When the operation cannot be done
+     *
+     * @see \Behat\Mink\Element\NodeElement::getCssValue
+     */
+    public function getCssValue($xpath, $name);
+
+    /**
      * Sets element's value by it's XPath query.
      *
      * @param string            $xpath
